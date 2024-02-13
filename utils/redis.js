@@ -1,4 +1,5 @@
 const redis = require ('redis');
+const promisify = require ('promisify');
 
 
 class RedisClient {
@@ -17,7 +18,6 @@ class RedisClient {
     isAlive() {
         return this.client.connected;
     }
-    this
 
     async get(key) {
         try {
